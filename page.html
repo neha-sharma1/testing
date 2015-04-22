@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<script src="validations.js"></script>
+<body>
+
+<form name="form1" action="#" onsubmit="return validateMe(this)">
+	<table>
+    <col align="left">
+	<tr>
+		<td>Salutation:</td>
+		<td><select>
+		    <option value=" "> </option>
+			<option value="Mr">Mr.</option>
+			<option value="Ms">Ms.</option>
+			<option value="Mrs">Mrs.</option>
+		</select></td>
+		<td>Full Name:</td>
+		<td><input placeholder="Full Name" type="text" id="full_name" name="full_name"></td>
+	</tr>
+	<tr>
+		<td>E-mail Address:</td>
+		<td><input placeholder="E-mail" type="text" id="mail" name="mail" onblur="ValidateEmail(document.form1.mail)"></td>
+		<td>Phone Number:</td>
+		<td><input placeholder="Mobile No" maxlength="10" type="text" id="phone" name="phone" onkeypress="return isNumberKey(event)"></td>
+	</tr>
+	</table>
+	<br><br>
+<input type="submit" onclick="location.href='mypage.html'">
+</form>
+
+</body>
+</html>
